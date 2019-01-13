@@ -1,0 +1,6 @@
+env/
+portfolio/__pycache__/
+portfolio/migrations/
+portfoliowithdjango/__pycache__/
+.vscode/
+
