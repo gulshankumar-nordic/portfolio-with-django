@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from .models import Contact
+from django.http import HttpResponse
+import requests, json
 
 # Create your views here.
 
