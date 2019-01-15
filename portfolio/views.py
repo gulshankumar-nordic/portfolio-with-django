@@ -12,7 +12,16 @@ def projects(request):
     return render(request, "portfolio/projects.html")
 
 def contact(request):
-    return render(request, "portfolio/contact.html")
+    print(request.method)
+    if request.method == 'POST':
+        email  =request.POST.get('email')
+        subject  =request.POST.get('subject')
+        message  =request.POST.get('message')
+        c=Contact(email=email, subject=subject, message=message)
+        c.save()
+        return render(request, "portfolio/thank.html")
+    else:
+        return render(request, "portfolio/contact.html")
 
 def wordCounter(request):
     return render(request, "portfolio/word-counter.html")
