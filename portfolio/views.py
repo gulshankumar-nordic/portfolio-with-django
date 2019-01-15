@@ -12,4 +12,7 @@ def projects(request):
     return render(request, "portfolio/projects.html")
 
 def contact(request):
-    return render(request, "portfolio/portfolio.html")
+    return render(request, "portfolio/contact.html")
+
+def wordCounter(request):
+    return render(request, "portfolio/word-counter.html")
